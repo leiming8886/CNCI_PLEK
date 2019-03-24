@@ -32,19 +32,19 @@ outPutFileName=os.path.splitext(inPutFileName)[0]#input是文件名，out是没�
 
 
 def sub_array(A,B):
-    x=Set(A)
-    y=Set(B)
+    x=set(A)
+    y=set(B)
     return list(x - y)
 
 def intersect_array(A,B):
-    x=Set(A)
-    y=Set(B)
+    x=set(A)
+    y=set(B)
     return list(x & y)
 
 
 def union_array(A,B):
-    x=Set(A)
-    y=Set(B)
+    x=set(A)
+    y=set(B)
     return list(x | y)
 
 def TwoLineFasta (Seq_Array):
@@ -123,12 +123,49 @@ else:
 	fr.close()
 	os.system('python ' + CNCIPATH + '/CNCI.py -f '+fastaFiles_notwoline+' -o '+outPutFileName+' -m ve -p '+Parallel)
 
+#set hash of two output of the out_plek and out_cnci, and output the intersection and the  union of PLEK and CNCI
+#[key for key in d]
 out_plek=outPutFileName
 out_cnci=outPutFileName+'/CNCI.index'
-
+#out_plek = "K510"
+#out_cnci = "CNCI.index"
 #set hash of two output of the out_plek and out_cnci
 #[key for key in d]
 out_set_plek={}
 out_set_cnci={}
-pl_fr=pd.read_table(out_set_plek)
-cn_fr=pd.read_table(out_set_cnci)
+pl_fr = open(out_plek)
+cn_fr = open(out_cnci)
+#g_pl_fr1 = pl_fr.readline()
+for line in  pl_fr.readlines():
+    line=line.replace('>','')
+    line1=line.strip()
+    line_c=line1.split('\t')
+    #print(line_c[2])
+    if line_c[0] == 'Coding':
+        continue
+    out_set_plek[line_c[2]]=line_c[0]
+#d.items()
+gi_p=[key for key in out_set_plek]
+#print(gi_p)
+
+for line in  cn_fr.readlines():
+    line1=line.strip()
+    line_c=line1.split('\t')
+    if line_c[1] ==  'coding' or line_c[1] ==  'index':
+        continue
+    out_set_cnci[line_c[0]]=line_c[1]
+#d.items()
+gi_c=[key for key in out_set_cnci]
+#print(gi_c)
+pl_fr.close()
+cn_fr.close()
+union=open("union_plek_cnci.txt",'w')
+inter=open("intersect_plek_cnci.txt",'w')
+for key in union_array(gi_p,gi_c):
+    union.write(key+'\tnonconding\n')
+    #print(key+'\tnonconding\n')
+for key in intersect_array(gi_p,gi_c):
+    inter.write(key+'\tnonconding\n')
+    #print(key + '\tnonconding\n')
+union.close()
+inter.close()
