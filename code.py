@@ -158,8 +158,8 @@ gi_c=[key for key in out_set_cnci]
 #print(gi_c)
 pl_fr.close()
 cn_fr.close()
-union=open("union_plek_cnci.txt",'w')
-inter=open("intersect_plek_cnci.txt",'w')
+union=open(outPutFileName+"union_plek_cnci.txt",'w')
+inter=open(outPutFileName+"intersect_plek_cnci.txt",'w')
 union.write('transcript ID\tPLEK_index\tPLEK_score\tCNCI_index\tCNCI_score\n')
 inter.write('transcript ID\tPLEK_index\tPLEK_score\tCNCI_index\tCNCI_score\n')
 for key in union_array(gi_p,gi_c):
