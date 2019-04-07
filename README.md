@@ -1,4 +1,4 @@
-Install CNCI_PLEK
+#Install CNCI_PLEK
 
 At the first time to running CNCI and PLEK, we suggest you to install "libsvm-3.0" that stored in our package.
 
@@ -7,11 +7,11 @@ cd CNCI_PLEK
 source setup.sh
 
 
-HELP for CNCI_PLEK subroutines
+#HELP for CNCI_PLEK subroutines
 
-main.py: an integration classification tool of CNCI and PLEK for identify coding or non-coding transcripts (fasta file and gtf file)
+##main.py: an integration classification tool of CNCI and PLEK for identify coding or non-coding transcripts (fasta file and gtf file)
 
-Usage: main.py [-h] -f input_gtf -p parallel -g -d ref_2bit
+###Usage: main.py [-h] -f input_gtf -p parallel -g -d ref_2bit
 
 Parameters:
 
@@ -24,16 +24,16 @@ Parameters:
 -d or --directory : if you use the -g  this parameter must be assigned, within this parameter please assign the path of your reference genome.
 Some reference files which has been prepared could be download at hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit, hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit
 
-The output: mainly contains 4 files
+###The output: mainly contains 4 files
 input_no_suffix directory: the name is the iutput file name without suffix. it contain the file of CNCI.index, which is the result of the software CNCI output.
 input_no_suffix_PLEK: which is the result of the software PLEK output.
 input_no_suffix_union_plek_cnci.txt: the output of union of the software CNCI and PLEK, in which the first column is the tanscript ID
 input_no_suffix_intersect_plek_cnci.txt: the output of intersect of the software CNCI and PLEK, in which the first column is the tanscript ID
 
 
-extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA
+##extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA
 
-Usage: extract_lncRNA_gtf.py -f input -g GTF -o out_dir
+###Usage: extract_lncRNA_gtf.py -f input -g GTF -o out_dir
 
 Parameters:
 
@@ -45,7 +45,7 @@ Parameters:
 -o or --out : OUTfile extract lncRNA information of GTF format
 
 
-tiss_spe.py : 
+##tiss_spe.py : 
 
 EXAMPLE
 you can use CNCI subroutines like our example:
