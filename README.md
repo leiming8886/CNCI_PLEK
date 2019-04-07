@@ -7,7 +7,7 @@ cd CNCI_PLEK
 source setup.sh
 ```
 
-## HELP for CNCI_PLEK subroutines
+### HELP for CNCI_PLEK subroutines
 
 **main.py: an integration classification tool of CNCI and PLEK for identify coding or non-coding transcripts (fasta file and gtf file)**
 
