@@ -21,7 +21,7 @@ Parameters:
 
  -g or --gtf : if you input file is gtf format please use this parameter
 
- -d or --directory : if you use the -g  this parameter must be assigned, within this parameter please assign the path of your reference genome.Some reference files which has been prepared could be download at [hg38](hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit), [hg19](hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit)
+ -d or --directory : if you use the -g  this parameter must be assigned, within this parameter please assign the path of your reference genome.Some reference files which has been prepared could be download at [hg38](hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit), [hg19](hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit).
 
 Output: mainly contains 4 files
 
