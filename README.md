@@ -25,6 +25,7 @@ Parameters:
 Some reference files which has been prepared could be download at hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit, hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit
 
 Output: mainly contains 4 files
+
 input_no_suffix directory: the name is the iutput file name without suffix. it contain the file of CNCI.index, which is the result of the software CNCI output.
 
 input_no_suffix_PLEK: which is the result of the software PLEK output.
