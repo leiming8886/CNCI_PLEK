@@ -1,4 +1,4 @@
-# Install CNCI_PLEK
+## Install CNCI_PLEK
 
 At the first time to running CNCI and PLEK, we suggest you to install "libsvm-3.0" that stored in our package.
 
@@ -7,9 +7,9 @@ cd CNCI_PLEK
 source setup.sh
 
 
-# HELP for CNCI_PLEK subroutines
+## HELP for CNCI_PLEK subroutines
 
-## main.py: an integration classification tool of CNCI and PLEK for identify coding or non-coding transcripts (fasta file and gtf file)
+### main.py: an integration classification tool of CNCI and PLEK for identify coding or non-coding transcripts (fasta file and gtf file)
 
 ### Usage: main.py [-h] -f input_gtf -p parallel -g -d ref_2bit
 
@@ -31,7 +31,7 @@ input_no_suffix_union_plek_cnci.txt: the output of union of the software CNCI an
 input_no_suffix_intersect_plek_cnci.txt: the output of intersect of the software CNCI and PLEK, in which the first column is the tanscript ID
 
 
-## extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA
+### extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA
 
 ### Usage: extract_lncRNA_gtf.py -f input -g GTF -o out_dir
 
@@ -45,7 +45,7 @@ Parameters:
 -o or --out : OUTfile extract lncRNA information of GTF format
 
 
-## tiss_spe.py : 
+### tiss_spe.py : 
 
 EXAMPLE
 you can use CNCI subroutines like our example:
