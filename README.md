@@ -3,7 +3,6 @@ Install CNCI_PLEK
 At the first time to running CNCI and PLEK, we suggest you to install "libsvm-3.0" that stored in our package.
 
 git clone https://github.com/leiming8886/CNCI_PLEK/
-
 cd CNCI_PLEK
 source setup.sh
 
@@ -25,7 +24,7 @@ Parameters:
 -d or --directory : if you use the -g  this parameter must be assigned, within this parameter please assign the path of your reference genome.
 Some reference files which has been prepared could be download at hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit, hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit
 
-the output: mainly contains 4 files
+The output: mainly contains 4 files
 input_no_suffix directory: the name is the iutput file name without suffix. it contain the file of CNCI.index, which is the result of the software CNCI output.
 input_no_suffix_PLEK: which is the result of the software PLEK output.
 input_no_suffix_union_plek_cnci.txt: the output of union of the software CNCI and PLEK, in which the first column is the tanscript ID
