@@ -34,7 +34,7 @@ Output: mainly contains 4 files
  input_no_suffix_intersect_plek_cnci.txt: the output of intersect of the software CNCI and PLEK, in which the first column is the tanscript ID
 
 
-** extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA**
+**extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA**
 
 #### Usage: extract_lncRNA_gtf.py -f input -g GTF -o out_dir
 
