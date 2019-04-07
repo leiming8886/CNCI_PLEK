@@ -1,11 +1,11 @@
 ### Install CNCI_PLEK
 At the first time to running CNCI and PLEK, we suggest you to install "libsvm-3.0" that stored in our package.
 
-'''
+```
 git clone https://github.com/leiming8886/CNCI_PLEK/
 cd CNCI_PLEK
 source setup.sh
-'''
+```
 
 ## HELP for CNCI_PLEK subroutines
 
@@ -50,13 +50,13 @@ Parameters:
 
 #### tiss_spe.py : 
 
-##EXAMPLE
+## EXAMPLE
 you can use CNCI_PLEK subroutines like our example:
 
-'''
+```
 python main.py -f candidate.gtf -p 6 -g -d hg38.2bit
 or 
 python main.py -f candidate.fasta -p 6
 
 python extract_lncRNA_gtf.py -f test.index -g unannotation.gtf -o out
-'''
+```
