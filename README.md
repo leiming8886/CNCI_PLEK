@@ -48,7 +48,7 @@ Parameters:
  -o or --out : Outfile extract lncRNA information of GTF format
 
 
-**tiss_spe.py : A tool that extract cancer-specific lncRNA information of GTF format**
+**tiss_specific.py : A tool that extract cancer-specific lncRNA information of GTF format**
 
 #### Usage: tiss_specific.py -f input -g GTF -o out_dir
 
