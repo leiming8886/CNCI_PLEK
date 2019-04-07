@@ -15,24 +15,23 @@ At the first time to running CNCI and PLEK, we suggest you to install "libsvm-3.
 
 Parameters:
 
--f or --file : input file of fasta file or gtf file, if the input is fasta file,the file format must be the twolineFasta
+        -f or --file : input file of fasta file or gtf file, if the input is fasta file,the file format must be the twolineFasta
 
--p or --parallel : assign the running CUP numbers
+        -p or --parallel : assign the running CUP numbers
 
--g or --gtf : if you input file is gtf format please use this parameter
+        -g or --gtf : if you input file is gtf format please use this parameter
 
--d or --directory : if you use the -g  this parameter must be assigned, within this parameter please assign the path of your reference genome.
-Some reference files which has been prepared could be download at hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit, hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit
+        -d or --directory : if you use the -g  this parameter must be assigned, within this parameter please assign the path of your reference genome.Some reference files which has been prepared could be download at hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit, hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit
 
 Output: mainly contains 4 files
 
-input_no_suffix directory: the name is the iutput file name without suffix. it contain the file of CNCI.index, which is the result of the software CNCI output.
+        input_no_suffix directory: the name is the iutput file name without suffix. it contain the file of CNCI.index, which is the result of the software CNCI output.
 
-input_no_suffix_PLEK: which is the result of the software PLEK output.
+        input_no_suffix_PLEK: which is the result of the software PLEK output.
 
-input_no_suffix_union_plek_cnci.txt: the output of union of the software CNCI and PLEK, in which the first column is the tanscript ID
+        input_no_suffix_union_plek_cnci.txt: the output of union of the software CNCI and PLEK, in which the first column is the tanscript ID
 
-input_no_suffix_intersect_plek_cnci.txt: the output of intersect of the software CNCI and PLEK, in which the first column is the tanscript ID
+        input_no_suffix_intersect_plek_cnci.txt: the output of intersect of the software CNCI and PLEK, in which the first column is the tanscript ID
 
 
 #### extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA
@@ -41,12 +40,12 @@ input_no_suffix_intersect_plek_cnci.txt: the output of intersect of the software
 
 Parameters:
 
--f or --file : input file of the candidate lncRNA, in which the first column is the tanscript ID of the candidate lncRNA. This file also can be the output file of CNCI.py
+        -f or --file : input file of the candidate lncRNA, in which the first column is the tanscript ID of the candidate lncRNA. This file also can be the output file of CNCI.py
 
--g or --gtf : GTF file corresponding to fasta in the main.py, where the last column contain the tanscript ID
+        -g or --gtf : GTF file corresponding to fasta in the main.py, where the last column contain the tanscript ID
 
 
--o or --out : OUTfile extract lncRNA information of GTF format
+        -o or --out : OUTfile extract lncRNA information of GTF format
 
 
 #### tiss_spe.py : 
