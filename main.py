@@ -5,6 +5,9 @@ from Bio import SeqIO
 #import pandas as pd
 import optparse
 import os
+from matplotlib import pyplot as plt
+import numpy as np
+from matplotlib_venn import venn3, venn3_circles,venn2,venn2_circles
 ######################### define input and output######################################
 #FileName = raw_input('Please enter your a file name: ')
 parse=optparse.OptionParser()
@@ -155,6 +158,15 @@ for line in  cn_fr.readlines():
     out_set_cnci[line_c[0]]=line_c[1]+"\t"+line_c[2]
 #d.items()
 gi_c=[key for key in out_set_cnci]
+
+#venny
+figure, axes = plt.subplots(1, 1)
+# venn2(subsets = (3, 2, 1))
+venn2([set(gi_p), set(gi_c)], set_labels = ('PLEK', 'CNCI'),)
+plt.title("Venn diagram between the lncRNA output of the PLEK and CNCI")
+figure.savefig('Venn_diagram_'+outPutFileName+'.pdf', bbox_inches='tight')
+plt.close()
+
 #print(gi_c)
 pl_fr.close()
 cn_fr.close()
