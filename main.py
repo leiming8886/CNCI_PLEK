@@ -5,33 +5,34 @@ from Bio import SeqIO
 #import pandas as pd
 import optparse
 import os
-from matplotlib import pyplot as plt
-import numpy as np
-from matplotlib_venn import venn3, venn3_circles,venn2,venn2_circles
+# import matplotlib.pyplot as plt
+# import numpy as np
+# from matplotlib_venn import venn3, venn3_circles,venn2,venn2_circles
 ######################### define input and output######################################
 #FileName = raw_input('Please enter your a file name: ')
 parse=optparse.OptionParser()
 parse.add_option('-f','--file',dest='file',action='store',metavar='input files',help='enter your transcript (sequence or gtf)')
 #parse.add_option('-o','--out',dest='outfile',action='store',metavar='output files',help='assign your output file')
+parse=optparse.OptionParser()
+parse.add_option('-f','--file',dest='file',action='store',metavar='input files',help='enter your transcript (sequence or gtf)')
+#parse.add_option('-o','--out',dest='outfile',action='store',metavar='output files',help='assign your output file')
 parse.add_option('-p','--parallel',dest='parallel',action='store',metavar='prallel numbers',help='please enter your specified speed ratio')
-parse.add_option('-m','--model',dest='model',action='store',metavar='model types',default='ve',help='please enter your specified classification model')
+#parse.add_option('-m','--model',dest='model',action='store',metavar='model types',default='ve',help='please enter your specified classification model')
 parse.add_option('-g','--gtf',dest='gtf',action='store_true',metavar='gtf file name',help='please enter your gtf files')
 parse.add_option('-d','--directory',dest='directory',action='store',metavar='',help='if your input file is gtf type please enter RefGenome directory')
-parse.add_option('-i','--cnci',dest='cnci',action='store',metavar='',help='enter path of the CNCI.py')
-parse.add_option('-k','--plek',dest='plek',action='store',metavar='',help='enter path of the PLEK.py')
 
 (options,args) = parse.parse_args()
 inPutFileName = options.file
 #outPutFileName = options.outfile
 Parallel = options.parallel
-ClassModel = options.model
+# ClassModel = options.model
 FileType = options.gtf
 Directory = options.directory
-CNCI = options.cnci #set absolute path
-PLEK = options.plek #set absolute path
-
-CNCIPATH=os.path.split(os.path.realpath(CNCI))[0]
-PLEK=os.path.split(os.path.realpath(PLEK))[0]
+# CNCI = options.cnci #set absolute path
+# PLEK = options.plek #set absolute path
+PATH=os.path.split(os.path.realpath(__file__))[0]
+CNCIPATH=PATH+"/CNCI-master"
+PLEK=PATH+"/PLEK.1.2"
 outPutFileName=os.path.splitext(inPutFileName)[0]
 def sub_array(A,B):
     x=set(A)
@@ -160,12 +161,12 @@ for line in  cn_fr.readlines():
 gi_c=[key for key in out_set_cnci]
 
 #venny
-figure, axes = plt.subplots(1, 1)
+# figure, axes = plt.subplots(1, 1)
 # venn2(subsets = (3, 2, 1))
-venn2([set(gi_p), set(gi_c)], set_labels = ('PLEK', 'CNCI'),)
-plt.title("Venn diagram between the lncRNA output of the PLEK and CNCI")
-figure.savefig('Venn_diagram_'+outPutFileName+'.pdf', bbox_inches='tight')
-plt.close()
+# venn2([set(gi_p), set(gi_c)], set_labels = ('PLEK', 'CNCI'),)
+# plt.title("Venn diagram between the lncRNA output of the PLEK and CNCI")
+# figure.savefig('Venn_diagram_'+outPutFileName+'.pdf', bbox_inches='tight')
+# plt.close()
 
 #print(gi_c)
 pl_fr.close()
