@@ -6,6 +6,7 @@ python PLEK_setup.py
 cd ../
 upzip fileName.zip
 cd CNCI-master
+chmod ugo+x  twoBitToFa
 unzip libsvm-3.0.zip
 cd libsvm-3.0
 make
