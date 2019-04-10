@@ -158,7 +158,6 @@ gi_c=[key for key in out_set_cnci]
 
 #venny
 figure = plt.figure()
-venn2(subsets = (3, 2, 1))
 venn2([set(gi_p), set(gi_c)], set_labels = ('PLEK', 'CNCI'),)
 plt.title("Venn diagram between the lncRNA output of the PLEK and CNCI")
 figure.savefig('Venn_diagram_'+outPutFileName+'.pdf', bbox_inches='tight')
