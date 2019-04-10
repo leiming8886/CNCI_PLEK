@@ -12,4 +12,7 @@ cd libsvm-3.0
 make
 cd ../../
 #source setup.sh
+<<<<<<< HEAD
 #matplotlib-venn
+=======
+>>>>>>> 7e0eb251e058e81aa098e1ab6463a87a151b216b
