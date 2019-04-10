@@ -19,13 +19,9 @@ parse.add_option('-d','--directory',dest='directory',action='store',metavar='',h
 
 (options,args) = parse.parse_args()
 inPutFileName = options.file
-#outPutFileName = options.outfile
 Parallel = options.parallel
-# ClassModel = options.model
 FileType = options.gtf
 Directory = options.directory
-# CNCI = options.cnci #set absolute path
-# PLEK = options.plek #set absolute path
 PATH=os.path.split(os.path.realpath(__file__))[0]
 CNCIPATH=PATH+'/CNCI-master'
 PLEK=PATH+'/PLEK.1.2'
@@ -134,7 +130,6 @@ out_set_plek={}
 out_set_cnci={}
 pl_fr = open(out_plek)
 cn_fr = open(out_cnci)
-#g_pl_fr1 = pl_fr.readline()
 for line in  pl_fr.readlines():
     line=line.replace('>','')
     line1=line.strip()
@@ -158,7 +153,6 @@ gi_c=[key for key in out_set_cnci]
 
 #venny
 figure = plt.figure()
-venn2(subsets = (3, 2, 1))
 venn2([set(gi_p), set(gi_c)], set_labels = ('PLEK', 'CNCI'),)
 plt.title("Venn diagram between the lncRNA output of the PLEK and CNCI")
 figure.savefig('Venn_diagram_'+outPutFileName+'.pdf', bbox_inches='tight')
@@ -183,5 +177,5 @@ for key in intersect_array(gi_p,gi_c):
     #print(key + '\tnonconding\n')
 union.close()
 inter.close()
-#run gtf pass : python3 PLEK_CNCI.py -f K510.gtf -p 6 -m ve -g -d /home/lmjiang/software/CNCI/hg38.2bit -i /home/lmjiang/software/CNCI/CNCI.py -k /home/lmjiang/software/PLEK.1.2/PLEK.py
-#run fasta pass: python3 PLEK_CNCI.py -f K510.fa -p 6 -m ve -i /home/lmjiang/software/CNCI/CNCI.py -k /home/lmjiang/software/PLEK.1.2/PLEK.py
+#run gtf pass : python PLEK_CNCI.py -f K510.gtf -p 6 -g -d /home/lmjiang/software/CNCI/hg38.2bit 
+#run fasta pass: python PLEK_CNCI.py -f K510.fa -p 6
