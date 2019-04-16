@@ -9,9 +9,9 @@ source setup.sh
 
 ### HELP for CNCI_PLEK subroutines
 
-**main.py: an integration classification tool of CNCI and PLEK for identify coding or non-coding transcripts (fasta file and gtf file)**
+**INCP.py: an integration classification tool of CNCI and PLEK for identify coding or non-coding transcripts (fasta file and gtf file)**
 
-#### Usage: main.py -f input_gtf -p parallel -g -d ref_2bit
+#### Usage: INCP.py -f input_gtf -p parallel -g -d ref_2bit
 
 Parameters:
 
