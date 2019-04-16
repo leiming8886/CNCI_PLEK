@@ -60,6 +60,17 @@ Parameters:
 
  -o or --out : Outfile extract lncRNA-specific information of GTF format
 
+**digitalTochrdigital.py : A tool that check if the first column chromosome is a numeric value of chr+digital  or of GTF format**
+
+#### Usage: digitalTochrdigital.py -i inputdir -o out_dir
+
+Parameters:
+
+ -i, --inputdir : input files of the gtf format
+
+ -o or --out : Outdir, create if the directory does not exist
+
+
 ## EXAMPLE
 you can use CNCI_PLEK subroutines like our example:
 
