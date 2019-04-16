@@ -88,7 +88,8 @@ do python /home/lmjiang/software/CNCI/CNCI.py -f $file1 -g -o ${file1%.gtf} -m v
 '''
 #CNCI and PLEK code
 if FileType:
-    os.system('python ' + CNCIPATH + '/CNCI.py -f '+inPutFileName+' -g -o '+outPutFileName+' -m ve -p '+Parallel+' -d ' +Directory)
+    if noot options.directory:
+        print("please enter RefGenome directory of 2bit")
 #fasta is not TwoLineFasta, fastaFiles = inPutFileName + '.fa', so need to convert format TwoLineFasta
     fastaFiles = outPutFileName + '.gtf.fa'
     fastaFiles_twoline=outPutFileName +'_plek'+'.fa'
