@@ -19,7 +19,7 @@ parse.add_option('-g','--hg',dest='hg',action='store',metavar='ref_name',help='p
 outPutFileName = options.outfile
 tss_name = options.tss
 refgene = options.hg
-inPutFileNames = list(map(lambda x: x.split(" "),options.files))
+inPutFileNames = list(map(lambda x: x.split(","),options.files))
 df = pd.read_csv("expression.txt",sep='\t')
 col_name_del_probes_De=list(df.columns)
 col_name_del_probes_De.remove("Probes")
