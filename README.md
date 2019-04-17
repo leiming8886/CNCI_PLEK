@@ -59,7 +59,7 @@ Parameters:
 
 -t or --tss : set tissue name. The background control tissue : 'adipose', 'adrenal', 'brain', 'breast', 'colon', 'heart', 'kidney', 'liver', 'lung', 'lymphNode', 'ovary', 'prostate', 'skeltalMuscle', 'whiteBloodCell', 'testes', 'thyroid', 'placenta', 'foreskin', 'hLF'. 
 
- -g or --hg : set refgene name of hg38 or hg19
+ -g or --g : set refgene name of hg38 or hg19
 
  -o or --out : Outfile extract lncRNA-specific information of GTF format
 
