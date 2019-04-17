@@ -102,7 +102,7 @@ if len(inPutFileNames)==1:
             else:
                 sam_gtf_out.write(line+'\n')
         else:
-            print(tss_name+'\n')
+            # print(tss_name+'\n')
             num_list_pick = 0
             pick = tss_name
             Pick_pro = dict_tiss[pick]
