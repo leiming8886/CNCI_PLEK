@@ -51,7 +51,7 @@ Parameters:
 
 **tiss_specific.py : A tool that extract cancer-specific lncRNA information of GTF format**
 
-#### Usage: tiss_specific.py -f input -g GTF -o outfile -g hg38
+#### Usage: tiss_specific.py -f inputGTF -t breast -o outfile -g hg38
 
 Parameters:
 
