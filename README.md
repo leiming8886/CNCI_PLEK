@@ -78,9 +78,9 @@ Parameters:
 you can use CNCI_PLEK subroutines like our example:
 
 ```
-python main.py -f candidate.gtf -p 6 -g -d hg38.2bit
+python INCP.py -f candidate.gtf -p 6 -g -d hg38.2bit
 or 
-python main.py -f candidate.fasta -p 6
+python INCP.py -f candidate.fasta -p 6
 python extract_lncRNA_gtf.py -f test.index -g unannotation.gtf -o out
 python tiss_specific.py -f control.gtf,sample.gtf -t breast -o out.gtf -g hg38
 or 
