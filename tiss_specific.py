@@ -5,6 +5,7 @@ import optparse
 import pandas as pd
 import re
 import copy
+import os
 #FileName = raw_input('Please enter your a file name: ')
 parse=optparse.OptionParser()
 parse.add_option('-f','--files',dest='files',type='string',action='store',metavar='input files',help='enter your transcript (contain the transcript ID)')
@@ -16,11 +17,12 @@ parse.add_option('-g','--g',dest='hg',type='string',action='store',metavar='ref 
 outPutFileName = options.outfile
 tss_name = options.tss
 refgene = options.hg
+PATH=os.path.split(os.path.realpath(__file__))[0]
 #inPutFileNames=options.files
 # print(options.files,"\n")
 inPutFileNames = list(options.files.split(","))
 # print(inPutFileNames,'\n')
-df = pd.read_csv("expression.txt",sep='\t')
+df = pd.read_csv(PATH+"/"+"expression.txt",sep='\t')
 col_name_del_probes_De=list(df.columns)
 col_name_del_probes_De.remove("Probes")
 col_name_del_probes_De.remove("Description")
@@ -42,10 +44,10 @@ for col_line in col_name_del_probes_De:
 
 
 if refgene == 'hg38':
-    ref_gtf=open('lncRNA_hg38.gtf','r')
+    ref_gtf=open(PATH+"/"+'lncRNA_hg38.gtf','r')
     print("hg38\n")
 if refgene == 'hg19':
-    ref_gtf=open('lncRNA_hg19.gtf','r')
+    ref_gtf=open(PATH+"/"+'lncRNA_hg19.gtf','r')
     print("hg19")
 fr=ref_gtf.readlines()
 #set_lncRNA key probe,value temp_list[[chr,start,end,strand],[chr,start,end,strand]]
