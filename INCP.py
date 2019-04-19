@@ -26,6 +26,11 @@ PATH=os.path.split(os.path.realpath(__file__))[0]
 CNCIPATH=PATH+'/CNCI-master'
 PLEK=PATH+'/PLEK.1.2'
 outPutFileName=os.path.splitext(inPutFileName)[0]
+try:
+    if not os.path.exists(inPutFileName):
+        print("inPut doesn't exist!")
+except:
+    print("inPut doesn't exist!")
 def sub_array(A,B):
     x=set(A)
     y=set(B)
