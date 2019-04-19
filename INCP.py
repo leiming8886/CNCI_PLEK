@@ -178,5 +178,5 @@ for key in intersect_array(gi_p,gi_c):
     #print(key + '\tnonconding\n')
 union.close()
 inter.close()
-#run gtf pass : python PLEK_CNCI.py -f K510.gtf -p 6 -g -d /home/lmjiang/software/CNCI/hg38.2bit 
-#run fasta pass: python PLEK_CNCI.py -f K510.fa -p 6
+#run gtf pass : python INCP.py -f K510.gtf -p 6 -g -r /home/lmjiang/software/CNCI/hg38.2bit 
+#run fasta pass: python INCP.py -f K510.fa -p 6
