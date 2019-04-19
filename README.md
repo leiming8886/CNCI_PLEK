@@ -6,14 +6,6 @@ git clone https://github.com/leiming8886/CNCI_PLEK.git
 cd CNCI_PLEK
 source setup.sh
 ```
-<div align="center">
-<img src="http://pp.myapp.com/ma_pic2/0/shot_42391053_1_1488499316/550" height="330" width="190" >
-
-<img src="http://pp.myapp.com/ma_pic2/0/shot_42391053_2_1488499316/550" height="330" width="190" >
-
-<img src="http://pp.myapp.com/ma_pic2/0/shot_42391053_3_1488499316/550" height="330" width="190" >
-
- </div>
 ### HELP for CNCI_PLEK subroutines
 
 **INCP.py: an integration classification tool of CNCI and PLEK for identify coding or non-coding transcripts (fasta file and gtf file)**
@@ -42,7 +34,7 @@ Output: mainly contains 5 files
  
  venny_plek_cnci.pdf : the summary of the venny between the output of the CNCI and PLEK
 #### venny image
-![image](img width="150" height="150" src="https://github.com/leiming8886/picture/blob/master/venny.png")
+<div align="center"><img width="150" height="150" src="https://github.com/leiming8886/picture/blob/master/venny.png"></div>
 ##Venny
 **extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA**
 
