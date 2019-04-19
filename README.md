@@ -55,7 +55,7 @@ Parameters:
 
 Parameters:
 
- -f or --files : input files of the candidate lncRNA gtf format, if the input files have two splited by ',', the first set control sample, the other set cancer sample. If the input files have only one, there are two situations. The one is based on a background control tissue. The other have not a background control tissue. Related knowledge can refer to the https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3185964/
+ -i or --input : input files of the candidate lncRNA gtf format, if the input files have two splited by ',', the first set control sample, the other set cancer sample. If the input files have only one, there are two situations. The one is based on a background control tissue. The other have not a background control tissue. Related knowledge can refer to the https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3185964/
 
  -t or --tissue : set tissue name. The background control tissue : 'adipose', 'adrenal', 'brain', 'breast', 'colon', 'heart', 'kidney', 'liver', 'lung', 'lymphNode', 'ovary', 'prostate', 'skeltalMuscle', 'whiteBloodCell', 'testes', 'thyroid', 'placenta', 'foreskin', 'hLF'. 
 
