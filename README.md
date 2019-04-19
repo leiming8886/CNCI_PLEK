@@ -19,13 +19,13 @@ Parameters:
 
  -p or --parallel : assign the running CUP numbers
 
- -g or --gtf : if you input file is gtf format please use this parameter
+ -g or --gtf : if you input file is gtf format, please use this parameter
 
  -r or --reference : if you use the -g  this parameter must be assigned, within this parameter please assign the path of your reference genome. Some reference files which has been prepared could be download at [hg38](hgdownload.cse.ucsc.edu/goldenPath/hg38/bigZips/hg38.2bit), [hg19](hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.2bit).
 
 Output: mainly contains 5 files
 
- input_no_suffix directory: the name is the intput file name without suffix. it contain the file of CNCI.index, which is the result of the software CNCI output.
+ input_no_suffix directory: the name is the intput file without suffix. it contain the file of CNCI.index, which is the result of the software CNCI output.
 
  input_no_suffix_PLEK: which is the result of the software PLEK output.
 
@@ -37,13 +37,13 @@ Output: mainly contains 5 files
 
 **extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA**
 
-#### Usage: extract_lncRNA_gtf.py -f input -g GTF -o output_name
+#### Usage: extract_lncRNA_gtf.py -i input -g GTF -o output_name
 
 Parameters:
 
  -i or --input : input file of the candidate lncRNA, in which the first column is the tanscript ID of the candidate lncRNA. This file also can be the output file of INCP.py
 
- -g or --gtf : GTF file corresponding to fasta in the main.py, where the last column contain the tanscript ID
+ -g or --gtf : GTF file corresponding to fasta in the INCP.py, where the last column contain the tanscript ID
 
 
  -o or --out : output name extracted lncRNA information of GTF format
@@ -51,7 +51,7 @@ Parameters:
 
 **tiss_specific.py : A tool that extract cancer-specific lncRNA information of GTF format**
 
-#### Usage: tiss_specific.py -f inputGTF -t breast -o output_name -g hg38
+#### Usage: tiss_specific.py -i input -t breast -r hg38 -o output_name 
 
 Parameters:
 
