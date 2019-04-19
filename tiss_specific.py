@@ -82,7 +82,7 @@ ref_gtf.close()
 if len(inPutFileNames)==1:
     # print("inPutFileNames ","1\n")
     sam_gtf = open(inPutFileNames[0], 'r')
-    sam_gtf_out = open(outPutFileName, 'w')
+    sam_gtf_out = open(outPutFileName+'.gtf', 'w')
     for line in sam_gtf.readlines():
         # line=sam_gtf.readline()
         line=line.strip()
@@ -177,7 +177,7 @@ if len(inPutFileNames)==2:
         set_gtf2.add(last_arr_id)
     sam_gtf2.close()
     sam = open(inPutFileNames[1], 'r')
-    sam_gtf_out = open(outPutFileName, 'w')
+    sam_gtf_out = open(outPutFileName+'.gtf', 'w')
     set_left=set_gtf2-set_gtf1
     for line in sam :
         # key=gene_ID,value  ruturn chr,start,end,strand
