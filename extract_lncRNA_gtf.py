@@ -7,13 +7,13 @@ import re
 ######################### define input and output######################################
 #FileName = raw_input('Please enter your a file name: ')
 parse=optparse.OptionParser()
-parse.add_option('-i','--input',dest='input',action='store',metavar='input files',help='enter your transcript (contain the transcript ID)')
-parse.add_option('-o','--out',dest='outname',action='store',metavar='output files',help='assign your output file')
+parse.add_option('-f','--file',dest='file',action='store',metavar='input files',help='enter your transcript (contain the transcript ID)')
+parse.add_option('-o','--out',dest='outfile',action='store',metavar='output files',help='assign your output file')
 parse.add_option('-g','--gtf',dest='gtf',action='store',metavar='gtf file name',help='please enter your gtf files')
 
 (options,args) = parse.parse_args()
-inPutFileName = options.input
-outPutFileName = options.outname
+inPutFileName = options.file
+outPutFileName = options.outfile
 FileType = options.gtf
 # inPutFileName = "intersect_plek_cnci.txt"
 # outPutFileName = "k510_ouy.gtf"
@@ -32,7 +32,7 @@ fr_lnc.close()
 #print([key for key in lncRNA_set])
 #open GTF
 fr_gtf = open(FileType)
-fr_out = open(outPutFileName+'.gtf','w')
+fr_out = open(outPutFileName,'w')
 for line in fr_gtf.readlines():
 	line.strip()
 	arr=line.split('\t')
