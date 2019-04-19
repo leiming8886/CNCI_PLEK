@@ -8,13 +8,13 @@ import copy
 import os
 #FileName = raw_input('Please enter your a file name: ')
 parse=optparse.OptionParser()
-parse.add_option('-i','--input',dest='files',type='string',action='store',metavar='input files',help='enter your transcript (contain the transcript ID)')
+parse.add_option('-i','--input',dest='files',action='store',metavar='input files',help='enter your transcript (contain the transcript ID)')
 #,nargs="*"
-parse.add_option('-o','--out',dest='outfile',type='string',action='store',metavar='output files',help='assign your output file')
-parse.add_option('-t','--tissue',dest='tss',type='string',action='store',metavar='tissue name',help='please enter tissue name')
-parse.add_option('-r','--reference',dest='hg',type='string',action='store',metavar='ref name',help='please enter hg38 or hg19')
+parse.add_option('-o','--out',dest='outfile',action='store',metavar='output files',help='assign your output file')
+parse.add_option('-t','--tissue',dest='tss',action='store',metavar='tissue name',help='please enter tissue name')
+parse.add_option('-r','--reference',dest='hg',action='store',metavar='ref name',help='please enter hg38 or hg19')
 (options,args) = parse.parse_args()
-outPutFileName = options.outfile
+outPutFileName = options.outfile+'.gtf'
 tss_name = options.tss
 refgene = options.hg
 PATH=os.path.split(os.path.realpath(__file__))[0]
@@ -82,7 +82,7 @@ ref_gtf.close()
 if len(inPutFileNames)==1:
     # print("inPutFileNames ","1\n")
     sam_gtf = open(inPutFileNames[0], 'r')
-    sam_gtf_out = open(outPutFileName+'.gtf', 'w')
+    sam_gtf_out = open(outPutFileName, 'w')
     for line in sam_gtf.readlines():
         # line=sam_gtf.readline()
         line=line.strip()
@@ -177,7 +177,7 @@ if len(inPutFileNames)==2:
         set_gtf2.add(last_arr_id)
     sam_gtf2.close()
     sam = open(inPutFileNames[1], 'r')
-    sam_gtf_out = open(outPutFileName+'.gtf', 'w')
+    sam_gtf_out = open(outPutFileName, 'w')
     set_left=set_gtf2-set_gtf1
     for line in sam :
         # key=gene_ID,value  ruturn chr,start,end,strand
