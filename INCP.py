@@ -15,13 +15,13 @@ parse=optparse.OptionParser()
 parse.add_option('-f','--file',dest='file',action='store',metavar='input files',help='enter your transcript (sequence or gtf)')
 parse.add_option('-p','--parallel',dest='parallel',action='store',metavar='prallel numbers',help='please enter your specified speed ratio')
 parse.add_option('-g','--gtf',dest='gtf',action='store_true',metavar='gtf file name',help='please enter your gtf files')
-parse.add_option('-d','--directory',dest='directory',action='store',metavar='',help='if your input file is gtf type please enter RefGenome directory')
+parse.add_option('-r','--reference',dest='reference',action='store',metavar='',help='if your input file is gtf type please enter RefGenome directory')
 
 (options,args) = parse.parse_args()
 inPutFileName = options.file
 Parallel = options.parallel
 FileType = options.gtf
-Directory = options.directory
+Directory = options.reference
 PATH=os.path.split(os.path.realpath(__file__))[0]
 CNCIPATH=PATH+'/CNCI-master'
 PLEK=PATH+'/PLEK.1.2'
