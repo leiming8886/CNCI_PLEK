@@ -82,7 +82,7 @@ python INCP.py -i candidate.gtf -p 6 -g -r hg38.2bit
 or 
 python INCP.py -i candidate.fasta -p 6
 python extract_lncRNA_gtf.py -i input -g candidate.gtf -o outname
-python tiss_specific.py -i control.gtf,sample.gtf -t breast -o outname -r hg38
+python tiss_specific.py -i control.gtf,sample.gtf -t breast -r hg38 -o outname
 or 
-python tiss_specific.py -i sample.gtf -t breast -o outname -r hg38
+python tiss_specific.py -i sample.gtf -t breast -r hg38-o outname
 ```
