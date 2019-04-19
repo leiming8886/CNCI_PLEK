@@ -36,7 +36,7 @@ Output: mainly contains 5 files
 #### venny image
 <div align="center"><img width="390" height="285" src="https://github.com/leiming8886/picture/blob/master/venny.png"></div>
 <p align="center">
- ## Venny
+Venny
 </p>
 
 **extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA**
