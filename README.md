@@ -35,7 +35,8 @@ Output: mainly contains 5 files
  
  venny_plek_cnci.pdf : the summary of the venny between the output of the CNCI and PLEK
 #### venny image
-![image](https://github.com/leiming8886/picture/blob/master/venny.png)Venny
+![image](img width="150" height="150" src="https://github.com/leiming8886/picture/blob/master/venny.png")
+##Venny
 **extract_lncRNA_gtf.py: A tool that extract lncRNA information of GTF format based on the tanscript ID of the candidate lncRNA**
 
 #### Usage: extract_lncRNA_gtf.py -i input -g GTF -o output_name
