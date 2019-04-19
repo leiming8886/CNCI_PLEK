@@ -41,7 +41,7 @@ Output: mainly contains 5 files
 
 Parameters:
 
- -i or --input : input file of the candidate lncRNA, in which the first column is the tanscript ID of the candidate lncRNA. This file also can be the output file of CNCI.py
+ -i or --input : input file of the candidate lncRNA, in which the first column is the tanscript ID of the candidate lncRNA. This file also can be the output file of INCP.py
 
  -g or --gtf : GTF file corresponding to fasta in the main.py, where the last column contain the tanscript ID
 
@@ -57,7 +57,7 @@ Parameters:
 
  -f or --files : input files of the candidate lncRNA gtf format, if the input files have two splited by ',', the first set control sample, the other set cancer sample. If the input files have only one, there are two situations. The one is based on a background control tissue. The other have not a background control tissue. Related knowledge can refer to the https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3185964/
 
- -t or --tss : set tissue name. The background control tissue : 'adipose', 'adrenal', 'brain', 'breast', 'colon', 'heart', 'kidney', 'liver', 'lung', 'lymphNode', 'ovary', 'prostate', 'skeltalMuscle', 'whiteBloodCell', 'testes', 'thyroid', 'placenta', 'foreskin', 'hLF'. 
+ -t or --tissue : set tissue name. The background control tissue : 'adipose', 'adrenal', 'brain', 'breast', 'colon', 'heart', 'kidney', 'liver', 'lung', 'lymphNode', 'ovary', 'prostate', 'skeltalMuscle', 'whiteBloodCell', 'testes', 'thyroid', 'placenta', 'foreskin', 'hLF'. 
 
  -r or --reference : set refgene name,'hg38' and 'hg19' can be chosen.
 
@@ -78,11 +78,11 @@ Parameters:
 you can use CNCI_PLEK subroutines like our example:
 
 ```
-python INCP.py -f candidate.gtf -p 6 -g -r hg38.2bit
+python INCP.py -i candidate.gtf -p 6 -g -r hg38.2bit
 or 
-python INCP.py -f candidate.fasta -p 6
-python extract_lncRNA_gtf.py -f test.index -g candidate.gtf -o out
-python tiss_specific.py -f control.gtf,sample.gtf -t breast -o out.gtf -g hg38
+python INCP.py -i candidate.fasta -p 6
+python extract_lncRNA_gtf.py -i input -g candidate.gtf -o outname
+python tiss_specific.py -i control.gtf,sample.gtf -t breast -o outname -r hg38
 or 
-python tiss_specific.py -f candidate.gtf -t breast -o out.gtf -g hg38
+python tiss_specific.py -i sample.gtf -t breast -o outname -r hg38
 ```
