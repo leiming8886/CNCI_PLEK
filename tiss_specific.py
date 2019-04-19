@@ -8,11 +8,11 @@ import copy
 import os
 #FileName = raw_input('Please enter your a file name: ')
 parse=optparse.OptionParser()
-parse.add_option('-f','--files',dest='files',type='string',action='store',metavar='input files',help='enter your transcript (contain the transcript ID)')
+parse.add_option('-i','--input',dest='files',type='string',action='store',metavar='input files',help='enter your transcript (contain the transcript ID)')
 #,nargs="*"
 parse.add_option('-o','--out',dest='outfile',type='string',action='store',metavar='output files',help='assign your output file')
-parse.add_option('-t','--tss',dest='tss',type='string',action='store',metavar='tissue name',help='please enter tissue name')
-parse.add_option('-g','--g',dest='hg',type='string',action='store',metavar='ref name',help='please enter hg38 or hg19')
+parse.add_option('-t','--tissue',dest='tss',type='string',action='store',metavar='tissue name',help='please enter tissue name')
+parse.add_option('-r','--reference',dest='hg',type='string',action='store',metavar='ref name',help='please enter hg38 or hg19')
 (options,args) = parse.parse_args()
 outPutFileName = options.outfile
 tss_name = options.tss
