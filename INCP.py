@@ -12,7 +12,7 @@ from matplotlib_venn import venn3, venn3_circles,venn2,venn2_circles
 ######################### define input and output######################################
 #FileName = raw_input('Please enter your a file name: ')
 parse=optparse.OptionParser()
-parse.add_option('-f','--file',dest='file',action='store',metavar='input files',help='enter your transcript (sequence or gtf)')
+parse.add_option('-i','--input',dest='file',action='store',metavar='input files',help='enter your transcript (sequence or gtf)')
 parse.add_option('-p','--parallel',dest='parallel',action='store',metavar='prallel numbers',help='please enter your specified speed ratio')
 parse.add_option('-g','--gtf',dest='gtf',action='store_true',metavar='gtf file name',help='please enter your gtf files')
 parse.add_option('-r','--reference',dest='reference',action='store',metavar='',help='if your input file is gtf type please enter RefGenome directory')
