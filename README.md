@@ -15,7 +15,7 @@ source setup.sh
 
 Parameters:
 
- -f or --file : input file of fasta file or gtf file, if the input is fasta file,the file format must be the twolineFasta
+ -i or --input : input file of fasta file or gtf file, if the input is fasta file,the file format must be the twolineFasta
 
  -p or --parallel : assign the running CUP numbers
 
@@ -41,7 +41,7 @@ Output: mainly contains 5 files
 
 Parameters:
 
- -f or --file : input file of the candidate lncRNA, in which the first column is the tanscript ID of the candidate lncRNA. This file also can be the output file of CNCI.py
+ -i or --input : input file of the candidate lncRNA, in which the first column is the tanscript ID of the candidate lncRNA. This file also can be the output file of CNCI.py
 
  -g or --gtf : GTF file corresponding to fasta in the main.py, where the last column contain the tanscript ID
 
