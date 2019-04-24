@@ -88,5 +88,5 @@ python INCP.py -i candidate.fasta -p 6
 python extract_lncRNA_gtf.py -i input -g candidate.gtf -o outname
 python tiss_specific.py -i control.gtf,sample.gtf -r hg38 -o outname
 or 
-python tiss_specific.py -i sample.gtf -t breast -r hg38-o outname
+python tiss_specific.py -i sample.gtf -t breast -r hg38 -o outname
 ```
